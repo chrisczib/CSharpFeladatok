@@ -16,14 +16,14 @@ namespace ConsoleApp2
             //_feladatok.FeladatA5();
             //_feladatok.FeladatA6();
             //_feladatok.FeladatA7();
-            _feladatok.FeladatA8();
+            //_feladatok.FeladatA8();
             //_feladatok.FeladatA9();
             //_feladatok.FeladatA10();
             //_feladatok.FeladatA11();
             //_feladatok.FeladatA12();
             //_feladatok.FeladatA13();
             //_feladatok.FeladatA14();
-            //_feladatok.FeladatA15();
+            _feladatok.FeladatA15();
             
 
         }
