@@ -72,7 +72,7 @@ namespace ConsoleApp2.AFeladatsor
         //6.feladat bekéri egy négyzet oldalhosszát (𝑎) és kiírja a kerületét és a területét 2 tizedes pontossággal.
         public void FeladatA6()
         {
-            Console.Write("Adja meg a négyzet oldalhosszát");
+            Console.Write("Adja meg a négyzet oldalhosszát: ");
             double oldalhossz = int.Parse(Console.ReadLine());
             double kerulet = 4 * oldalhossz;
             double terulet = oldalhossz * oldalhossz;
@@ -85,9 +85,9 @@ namespace ConsoleApp2.AFeladatsor
 
         public void FeladatA7()
         {
-            Console.Write("Adja meg a téglalap A oldalát");
+            Console.Write("Adja meg a téglalap A oldalát: ");
             double A = int.Parse(Console.ReadLine());
-            Console.Write("Adja meg a téglalap B oldalát");
+            Console.Write("Adja meg a téglalap B oldalát: ");
             double B = int.Parse(Console.ReadLine());
             double kerulet = 2 * (A + B);
             double terulet = A * B;
@@ -99,23 +99,23 @@ namespace ConsoleApp2.AFeladatsor
         // 8. feladat bekéri egy kocka oldalhosszúságát (𝑎) és kiírja a kocka felszínét és térfogatát 2 tizedes pontossággal!
         public void FeladatA8()
         {
-            Console.Write("Adja meg a kocka oldalhosszúságát");
-            double A = int.Parse(Console.ReadLine());
-            double felszin = 6 * (A * A);
-            double terulet = (A * A * A);
+            Console.Write("Adja meg a kocka oldalhosszúságát: ");
+            double a = int.Parse(Console.ReadLine());
+            double felszin = 6 * (a * a);
+            double terulet = (a * a * a);
 
-            Console.WriteLine("A kocka felszine: {0:0.00", felszin);
-            Console.WriteLine("A kocka területe: {0:0.00", terulet);
+            Console.WriteLine("A kocka felszine: {0:0.00}", felszin);
+            Console.WriteLine("A kocka területe: {0:0.00}", terulet);
         }
 
         //9. feladat bekéri egy téglatest oldalainak a hosszát (𝑎, 𝑏, 𝑐) és kiírja a téglatest felszínét (𝐹) és térfogatát(𝑇) 3 tizedes pontossággal.
         public void FeladatA9()
         {
-            Console.Write("Adja meg a téglalap A oldalát");
+            Console.Write("Adja meg a téglalap A oldalát: ");
             double A = int.Parse(Console.ReadLine());
-            Console.Write("Adja meg a téglalap B oldalát");
+            Console.Write("Adja meg a téglalap B oldalát: ");
             double B = int.Parse(Console.ReadLine());
-            Console.Write("Adja meg a téglalap C oldalát");
+            Console.Write("Adja meg a téglalap C oldalát: ");
             double C = int.Parse(Console.ReadLine());
             //téglatest felszine
             double felszin = (2 * A * B) + (2 * A * C) + (2 * B * C);
@@ -147,7 +147,7 @@ namespace ConsoleApp2.AFeladatsor
         //11. feladat bekér egy pénzösszeget és a legkisebb fizetőeszköznek (5 Ft) megfelelőre kerekíti.
         public void FeladatA11()
         {
-            Console.WriteLine("Adja meg az összeget");
+            Console.Write("Adja meg az összeget: ");
             double osszeg = int.Parse(Console.ReadLine());
             double kerekitve = Math.Round(osszeg / 5.0) * 5;
 
@@ -157,11 +157,13 @@ namespace ConsoleApp2.AFeladatsor
         //12. feladat. Írjunk programot, amely bekéri „𝐴” és „𝐵” pont koordinátáit, majd kiszámolja azok távolságát
         public void FeladatA12()
         {
-            Console.WriteLine("Adja meg az A pont koordinátáit");
+            Console.Write("Adja meg az A pont koordináta első részét: ");
             double a1 = int.Parse(Console.ReadLine());
+            Console.Write("Adja meg az A pont koordináta második részét: ");
             double a2 = int.Parse(Console.ReadLine());
-            Console.WriteLine("Adja meg a B pont koordinátáit");
+            Console.Write("Adja meg a B pont koordináta első részét: ");
             double b1 = int.Parse(Console.ReadLine());
+            Console.Write("Adja meg a B pont koordináta második részét: ");
             double b2 = int.Parse(Console.ReadLine());
             double distance = Math.Sqrt((b1 - a1) * (b1 - a1) + (b2 - a2) * (b2 - a2));
 
@@ -195,19 +197,25 @@ namespace ConsoleApp2.AFeladatsor
         {
             Console.Write("Adja meg hány db 500 van: ");
             double a = int.Parse(Console.ReadLine());
+            double a1 = a * 500;
             Console.Write("Adja meg hány db 1000 van: ");
             double b = int.Parse(Console.ReadLine());
+            double b1 = b * 1000;
             Console.Write("Adja meg hány db 2000 van: ");
             double c = int.Parse(Console.ReadLine());
+            double c1 = c * 2000;
             Console.Write("Adja meg hány db 5000 van: ");
             double d = int.Parse(Console.ReadLine());
+            double d1 = d * 5000;
             Console.Write("Adja meg hány db 10000 van: ");
             double e = int.Parse(Console.ReadLine());
+            double e1 = e * 10000;
             Console.Write("Adja meg hány db 20000 van: ");
             double f = int.Parse(Console.ReadLine());
-            double osszes = a + b + c + d + e + f;
+            double f1 = f * 20000;
+            double osszes = a1 + b1 + c1 + d1 + e1 + f1;
 
-            Console.WriteLine("Az összes bevétel: {000000:0}", osszes);
+            Console.WriteLine("Az összes bevétel: {0:0}", osszes);
             
 
 
