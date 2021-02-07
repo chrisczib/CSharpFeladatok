@@ -1,14 +1,17 @@
 ﻿using System;
 using ConsoleApp2.AFeladatsor;
+using ConsoleApp2.BFeladatsor;
 
 namespace ConsoleApp2
 {
     class Program
     {
         static elsoFeladat _feladatok = new elsoFeladat();
+        static masodikfeladat _feladatok2 = new masodikfeladat();
         static void Main(string[] args)
         {
-            // meghívom az osztályom metódusát
+            // A feladatsor
+            /*
             _feladatok.FeladatA1();
             _feladatok.FeladatA2();
             _feladatok.FeladatA3();
@@ -24,7 +27,28 @@ namespace ConsoleApp2
             _feladatok.FeladatA13();
             _feladatok.FeladatA14();
             _feladatok.FeladatA15();
+            */
+
+
+            // B feladatsor
+            /*_feladatok2.FeladatB1();
+            _feladatok2.FeladatB2();
+            _feladatok2.FeladatB3();
+            _feladatok2.FeladatB4();
+            _feladatok2.FeladatB5();
+            _feladatok2.FeladatB6();
+            _feladatok2.FeladatB7();
+            _feladatok2.FeladatB8();
+            _feladatok2.FeladatB9();
+            _feladatok2.FeladatB10();
+            _feladatok2.FeladatB11();
+            _feladatok2.FeladatB12();
             
+
+
+            */
+            _feladatok2.FeladatB13();
+
 
         }
     }
