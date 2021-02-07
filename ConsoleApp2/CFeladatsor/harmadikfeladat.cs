@@ -201,8 +201,6 @@ namespace ConsoleApp2.CFeladatsor
             int a = int.Parse(Console.ReadLine());
             Console.Write("Adja meg a második számot: ");
             int b = int.Parse(Console.ReadLine());
-
-            int b = 1;
             int c = 0;
 
             while (c < a) 
