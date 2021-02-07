@@ -1,6 +1,7 @@
 ﻿using System;
 using ConsoleApp2.AFeladatsor;
 using ConsoleApp2.BFeladatsor;
+using ConsoleApp2.CFeladatsor;
 
 namespace ConsoleApp2
 {
@@ -8,9 +9,10 @@ namespace ConsoleApp2
     {
         static elsoFeladat _feladatok = new elsoFeladat();
         static masodikfeladat _feladatok2 = new masodikfeladat();
+        static harmadikfeladat _feladatok3 = new harmadikfeladat();
         static void Main(string[] args)
         {
-            // A feladatsor
+            // A. Egyszerű adat ki- és bevitel 
             /*
             _feladatok.FeladatA1();
             _feladatok.FeladatA2();
@@ -30,7 +32,7 @@ namespace ConsoleApp2
             */
 
 
-            // B feladatsor
+            // B. Szelekciók 
             /*_feladatok2.FeladatB1();
             _feladatok2.FeladatB2();
             _feladatok2.FeladatB3();
@@ -43,13 +45,30 @@ namespace ConsoleApp2
             _feladatok2.FeladatB10();
             _feladatok2.FeladatB11();
             _feladatok2.FeladatB12();
-            
+            _feladatok2.FeladatB13();
+            */
+
+            // C. Ciklusok 
+            /* 
+             _feladatok3.FeladatC1();
+             _feladatok3.FeladatC2();
+            _feladatok3.FeladatC3();
+            _feladatok3.FeladatC4();
+            _feladatok3.FeladatC5();
+            _feladatok3.FeladatC6();
+            _feladatok3.FeladatC7();
+            _feladatok3.FeladatC8();
+            _feladatok3.FeladatC9();
+            _feladatok3.FeladatC10();
+            _feladatok3.FeladatC11();
+
+
+
 
 
             */
-            _feladatok2.FeladatB13();
-
-
+            _feladatok3.FeladatC10();
+            //_feladatok3.FeladatC12();
         }
     }
 }
