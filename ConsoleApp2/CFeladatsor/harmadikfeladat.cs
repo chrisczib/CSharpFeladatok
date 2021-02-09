@@ -310,13 +310,12 @@ namespace ConsoleApp2.CFeladatsor
         public void FeladatC17()
 		{
             string stars = "";
+            int c = 1;
 
-			for (int i = 16; i > 1; i--)
+			for (int i = 16; i > c; i--)
 			{
-                for (int j = 1; j < i; j++)
-                {
-                    stars += "*";
-                }
+                
+                stars += "*";
                 Console.WriteLine(stars);
             }
             
