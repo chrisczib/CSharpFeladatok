@@ -63,12 +63,15 @@ namespace ConsoleApp2
             _feladatok3.FeladatC11();
 
 
-
-
+            _feladatok3.FeladatC14();
+            _feladatok3.FeladatC15();
+            _feladatok3.FeladatC16();
 
             */
-            _feladatok3.FeladatC10();
+
             //_feladatok3.FeladatC12();
+            //_feladatok3.FeladatC13();
+            _feladatok3.FeladatC17();
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace ConsoleApp2.CFeladatsor
 {
     class harmadikfeladat
@@ -194,40 +195,148 @@ namespace ConsoleApp2.CFeladatsor
             
         }
 
-        //12. bekér két számot és kiírja a legnagyobb közös osztót.
+        //12. bekér két számot és kiírja a legnagyobb közös osztót. NOTDONE
         public void FeladatC12()
         {
-            Console.Write("Adja meg az első számot: ");
+            Console.Write("Adjon meg egy számot: ");
             int a = int.Parse(Console.ReadLine());
-            Console.Write("Adja meg a második számot: ");
-            int b = int.Parse(Console.ReadLine());
+            int b = 1;
             int c = 0;
+            int largestOsztoA = 0;
+            int largestOsztoB = 0;
 
-            while (c < a) 
+            while (b < a)
             {
-                if (a % b == 0 & b != 1)
+                if (a % b == 0 & b != 1 & b != a)
                 {
                     Console.WriteLine(b);
                     c++;
                 }
+                
                 b++;
             }
-            Console.WriteLine("A számnak ennyi osztója van: {0:0}", c);
+			if (c == 100 - 1)
+			{
+                largestOsztoA = b;
+			}
 
+            Console.WriteLine("{0:0}", largestOsztoA);
+            Console.WriteLine("A számnak ennyi osztója van: {0:0}", c);
 
         }
 
-
-
-
-
-
-        //13. bekér két számot és kiírja a legkisebb közös többszöröst.
+        //13. bekér két számot és kiírja a legkisebb közös többszöröst. NOTDONE
         //14. Készítsen programot, ami számokat kér be addig, míg az utolsó két szám meg nem egyezik!
+        public void FeladatC14()
+		{
+            int a = 0;
+            int b = 1;
+
+			while (a != b)
+			{
+                Console.Write("Adja meg az első számot: ");
+                int c = int.Parse(Console.ReadLine());
+                a = c;
+                Console.Write("Adja meg a második számot: ");
+                int d = int.Parse(Console.ReadLine());
+                b = d;
+            }
+
+		}
+
         //15. A gép véletlenszerűen találjon ki egy számot 1 és 100 között! A felhasználótól kérjen be tippeket, és mondja meg, hogy a gondolt szám a tipptől nagyobb-e vagy kisebb! A tippelés addig megy, amíg a felhasználó el nem találta a megadott számot.
+        public void FeladatC15()
+		{
+            Random random = new Random();
+            int a = random.Next(1,101);
+            int b = 0;
+
+
+            while (a != b)
+			{
+                Console.WriteLine("Tippeljen egy számot: ");
+                b = int.Parse(Console.ReadLine());
+				if (b > a)
+				{
+                    Console.WriteLine("A tipp nagyobb mint a kitalálandó szám!");
+				}
+				else if (b < a)
+				{
+                    Console.WriteLine("A tipp kisebb mint a kitalálandó szám!");
+				}
+				{
+
+				}
+
+			}
+
+		}
+
         //16. Bővítse az előző feladatot úgy, hogy a szám eltalálásakor írja ki hány tippelésből sikerült eltalálni a számot!
+        public void FeladatC16()
+        {
+            Random random = new Random();
+            int a = random.Next(1, 101);
+            int b = 0;
+            int c = 1;
+
+            while (a != b)
+            {
+                Console.WriteLine("Tippeljen egy számot: ");
+                b = int.Parse(Console.ReadLine());
+                if (b > a)
+                {
+                    Console.WriteLine("A tipp nagyobb mint a kitalálandó szám!");
+                    c++;
+                }
+                else if (b < a)
+                {
+                    Console.WriteLine("A tipp kisebb mint a kitalálandó szám!");
+                    c++;
+				}
+				else if (a == b)
+				{
+                    Console.WriteLine("Ennyi tippbe került kitalálni: {0:0}", c);
+				}
+                {
+
+                }
+
+            }
+
+        }
 
         //17. Készítsünk programot, amely az első sorba kiír 15 *-ot, a másodikba 14 *-ot, …, a tizennegyedik sorba 2 *-ot, a tizenötödik sorba pedig 1*-ot! A csillagok kiírása a sor elején kezdődjön!
+        public void FeladatC17()
+		{
+            string stars = "";
+
+			for (int i = 16; i > 1; i--)
+			{
+                for (int j = 1; j < i; j++)
+                {
+                    stars += "*";
+                }
+                Console.WriteLine(stars);
+            }
+            
+           
+            
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         //18. Készítse el az előző feladatot úgy, hogy a 2. sortól kezdődően a *-ok jobbra legyenek igazítva, az első sor utolsó csillagához!
 
