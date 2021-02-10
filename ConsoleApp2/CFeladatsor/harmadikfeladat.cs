@@ -227,6 +227,25 @@ namespace ConsoleApp2.CFeladatsor
         }
 
         //13. bekér két számot és kiírja a legkisebb közös többszöröst. NOTDONE
+        public void FeladatC13()
+		{
+            Console.Write("Adja meg az első számot: ");
+            int a = int.Parse(Console.ReadLine());
+            Console.Write("Adja meg a második számot: ");
+            int b = int.Parse(Console.ReadLine());
+
+
+
+        
+        
+        }
+
+
+
+
+
+
+
         //14. Készítsen programot, ami számokat kér be addig, míg az utolsó két szám meg nem egyezik!
         public void FeladatC14()
 		{
@@ -332,22 +351,44 @@ namespace ConsoleApp2.CFeladatsor
         public void FeladatC18()
 		{
             string stars = "*";
+            string space = " ";
             int a = 16;
             int c = 1;
+            int counter = 0;
 
             while (c != 15 + 1)
             {
 
+                //kivon egyet a counterből
+                //ezzel lentebb lépett egyet 14re
+                //kiír 14 csillagot
+                //a 14 csillag elé rak annyi spacet amennyi az a counter, avagy amennyi hiányzik a csillagból
+
+
+
+
+                //kiírja a 15 csillagot.
                 for (int i = 1; i < a; i++)
                 {
-                    
                     Console.Write(stars);
-
+					if (a < 16)
+					{
+                        Console.Write(space, stars);
+					}
                 }
                 a--;
                 Console.WriteLine("");
                 c++;
+                counter++;
+
+
+
+
+
+
+
             }
+
         }
     }
 }
