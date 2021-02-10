@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 
@@ -309,35 +310,44 @@ namespace ConsoleApp2.CFeladatsor
         //17. Készítsünk programot, amely az első sorba kiír 15 *-ot, a másodikba 14 *-ot, …, a tizennegyedik sorba 2 *-ot, a tizenötödik sorba pedig 1*-ot! A csillagok kiírása a sor elején kezdődjön!
         public void FeladatC17()
 		{
-            string stars = "";
+            string stars = "*";
+            int a = 16;
             int c = 1;
 
-			for (int i = 16; i > c; i--)
+            while (c != 15+1)
 			{
-                
-                stars += "*";
-                Console.WriteLine(stars);
-            }
-            
-           
-            
+
+                for (int i = 1; i < a; i++)
+                {
+                    Console.Write(stars);
+                    
+                }
+                a--;
+                Console.WriteLine("");
+                c++;
+            } 
 		}
 
+        //18. Készítse el az előző feladatot úgy, hogy a 2. sortól kezdődően a *-ok jobbra legyenek igazítva, az első sor utolsó csillagához! NOT DONE
+        public void FeladatC18()
+		{
+            string stars = "*";
+            int a = 16;
+            int c = 1;
 
+            while (c != 15 + 1)
+            {
 
+                for (int i = 1; i < a; i++)
+                {
+                    
+                    Console.Write(stars);
 
-
-
-
-
-
-
-
-
-
-
-
-        //18. Készítse el az előző feladatot úgy, hogy a 2. sortól kezdődően a *-ok jobbra legyenek igazítva, az első sor utolsó csillagához!
-
+                }
+                a--;
+                Console.WriteLine("");
+                c++;
+            }
+        }
     }
 }
