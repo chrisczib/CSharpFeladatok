@@ -4,9 +4,9 @@ using System.Text;
 
 namespace ConsoleApp2.Orai_Magyarazatok
 {
-	class Class1
+	class tombok
 	{
-            static void Main(string[] args)
+            static void tombokFeladat()
             {
                 Console.WriteLine("hány elemű a tömb??");
                 int darab = Convert.ToInt32(Console.ReadLine());

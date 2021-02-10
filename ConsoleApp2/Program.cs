@@ -2,6 +2,7 @@
 using ConsoleApp2.AFeladatsor;
 using ConsoleApp2.BFeladatsor;
 using ConsoleApp2.CFeladatsor;
+using ConsoleApp2.Orai_Magyarazatok;
 
 namespace ConsoleApp2
 {
@@ -10,6 +11,7 @@ namespace ConsoleApp2
         static elsoFeladat _feladatok = new elsoFeladat();
         static masodikfeladat _feladatok2 = new masodikfeladat();
         static harmadikfeladat _feladatok3 = new harmadikfeladat();
+        static tombok _oraifeladatok = new tombok();
         static void Main(string[] args)
         {
             // A. Egyszerű adat ki- és bevitel 
@@ -71,7 +73,16 @@ namespace ConsoleApp2
 
             //_feladatok3.FeladatC12();
             //_feladatok3.FeladatC13();
-            _feladatok3.FeladatC18();
+            //_feladatok3.FeladatC18();
+
+            /* Orai feladatok 
+             
+             
+             
+             
+             
+             */
+            _oraifeladatok.tombokFeladat();
         }
     }
 }
