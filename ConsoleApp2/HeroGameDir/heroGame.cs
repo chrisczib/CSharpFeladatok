@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using ConsoleApp2.HeroGameDir;
 
 namespace ConsoleApp2.HeroGameDir
 {
 	class heroGame
 	{
-
+		static throwaway _missChance = new throwaway();
 		Random rnd = new Random();
 
 		public void mainGamePlay()
@@ -85,6 +86,8 @@ namespace ConsoleApp2.HeroGameDir
 						}
 
 						//miss chance
+						_missChance.missChance();
+
 						if (missHit <= 20)
 						{
 							heroHit = 0;

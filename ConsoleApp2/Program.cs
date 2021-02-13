@@ -5,6 +5,7 @@ using ConsoleApp2.CFeladatsor;
 using ConsoleApp2.Orai_Magyarazatok;
 using ConsoleApp2.HeroGameDir;
 
+
 namespace ConsoleApp2
 {
     class Program
@@ -14,12 +15,13 @@ namespace ConsoleApp2
         static harmadikfeladat _feladatok3 = new harmadikfeladat();
         static tombok _oraifeladatok = new tombok();
         static heroGame _hero = new heroGame();
+        static throwaway _test = new throwaway();
+
         static void Main(string[] args)
         {
             /*******************Hero Game*******************/
-            _hero.mainGamePlay();
-
-
+            //_hero.mainGamePlay();
+            _test.missChance();
 
 
 
