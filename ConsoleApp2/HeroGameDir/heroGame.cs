@@ -6,6 +6,7 @@ namespace ConsoleApp2.HeroGameDir
 {
 	class heroGame
 	{
+
 		Random rnd = new Random();
 
 		public void mainGamePlay()
@@ -45,17 +46,15 @@ namespace ConsoleApp2.HeroGameDir
 					if (heroNum > villainNum)
 					{
 						whoHits = heroName;
-						villainHP -= heroHit;
 						firstHit = heroName;
-						Console.WriteLine("hero hit number {0}", heroHit);
+						Console.WriteLine("hero attack damage {0}", heroHit);
 					} else if (villainNum > heroNum)
 					{
 						whoHits = villainName;
-						heroHP -= villainHit;
 						firstHit = villainName;
 						Console.WriteLine("villain hit number {0}", villainHit);
 					}
-					Console.WriteLine(whoHits);
+					Console.WriteLine("first hit is: {0}",whoHits);
 					
 
 				} else if (gameRound > 1)
@@ -67,19 +66,21 @@ namespace ConsoleApp2.HeroGameDir
 						missHit = rnd.Next(1, 101);
 						
 						//Critical chance 
-						if (criticalHit <= 99)
+						if (criticalHit <= 30)
 						{
-							heroHit *= heroHit;
+							heroHit = heroHit * 2;
+							villainHP -= heroHit;
+							Console.WriteLine("hero hit value: {0}",heroHit);
 							critical = true;
-							Console.WriteLine("critical hit {0}", criticalHit);
+							Console.WriteLine("hero critical hit {0}", criticalHit);
 							Console.WriteLine("hero critical {0}", critical);
-							Console.WriteLine("hero critical", critical);
 						}
 						else
 						{
 							heroHit = heroHit;
+							villainHP -= heroHit;
 							critical = false;
-							Console.WriteLine("critical hit {0}",criticalHit);
+							Console.WriteLine("hero critical hit {0}",criticalHit);
 							Console.WriteLine("hero critical {0}", critical);
 						}
 
@@ -87,25 +88,70 @@ namespace ConsoleApp2.HeroGameDir
 						if (missHit <= 20)
 						{
 							heroHit = 0;
+							villainHP -= heroHit;
 							miss = true;
-							Console.WriteLine("miss hit {0}", missHit);
+							Console.WriteLine("hero miss hit {0}", missHit);
 							Console.WriteLine("hero miss {0}", miss);
 						}
 						else
 						{
 							heroHit = heroHit;
+							villainHP -= heroHit;
 							miss = false;
-							Console.WriteLine("missHit {0}",missHit);
+							Console.WriteLine("hero missHit {0}",missHit);
 							Console.WriteLine("hero miss {0}", miss);
 						}
 
+					}
+					else if (firstHit == villainName)
+					{
+						villainHit = rnd.Next(5, 8);
+						criticalHit = rnd.Next(1, 101);
+						missHit = rnd.Next(1, 101);
+
+						//Critical chance 
+						if (criticalHit <= 30)
+						{
+							villainHit = villainHit * 2;
+							heroHP -= villainHit;
+							Console.WriteLine("Villain hit number: {0}",villainHit);
+							critical = true;
+							Console.WriteLine("villain critical hit {0}", criticalHit);
+							Console.WriteLine("villain critical {0}", critical);
+						}
+						else
+						{
+							villainHit = villainHit;
+							heroHP -= villainHit;
+							critical = false;
+							Console.WriteLine("villain critical hit {0}", criticalHit);
+							Console.WriteLine("villain critical {0}", critical);
+						}
+
+						//miss chance
+						if (missHit <= 20)
+						{
+							villainHit = 0;
+							heroHP -= villainHit;
+							miss = true;
+							Console.WriteLine("villain miss hit {0}", missHit);
+							Console.WriteLine("villain miss {0}", miss);
+						}
+						else
+						{
+							villainHit = villainHit;
+							heroHP -= villainHit;
+							miss = false;
+							Console.WriteLine("villain missHit {0}", missHit);
+							Console.WriteLine("villain miss {0}", miss);
+						}
 					}
 					Console.WriteLine("hero hp {0}", heroHP);
 					Console.WriteLine("villain hp {0}", villainHP);
 					
 				}
 				
-
+				
 
 
 
