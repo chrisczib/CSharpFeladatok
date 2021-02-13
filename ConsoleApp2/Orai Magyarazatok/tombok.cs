@@ -6,7 +6,7 @@ namespace ConsoleApp2.Orai_Magyarazatok
 {
 	class tombok
 	{
-            static void tombokFeladat()
+            public void tombokFeladat()
             {
                 Console.WriteLine("hány elemű a tömb??");
                 int darab = Convert.ToInt32(Console.ReadLine());

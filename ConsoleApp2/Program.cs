@@ -3,6 +3,7 @@ using ConsoleApp2.AFeladatsor;
 using ConsoleApp2.BFeladatsor;
 using ConsoleApp2.CFeladatsor;
 using ConsoleApp2.Orai_Magyarazatok;
+using ConsoleApp2.HeroGameDir;
 
 namespace ConsoleApp2
 {
@@ -12,8 +13,27 @@ namespace ConsoleApp2
         static masodikfeladat _feladatok2 = new masodikfeladat();
         static harmadikfeladat _feladatok3 = new harmadikfeladat();
         static tombok _oraifeladatok = new tombok();
+        static heroGame _hero = new heroGame();
         static void Main(string[] args)
         {
+            /*******************Hero Game*******************/
+            _hero.mainGamePlay();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // A. Egyszerű adat ki- és bevitel 
             /*
             _feladatok.FeladatA1();
@@ -76,13 +96,13 @@ namespace ConsoleApp2
             //_feladatok3.FeladatC18();
 
             /* Orai feladatok 
-             
+             _oraifeladatok.tombokFeladat();
              
              
              
              
              */
-            _oraifeladatok.tombokFeladat();
+
         }
     }
 }
