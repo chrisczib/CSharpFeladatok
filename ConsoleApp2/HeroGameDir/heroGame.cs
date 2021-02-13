@@ -27,36 +27,44 @@ namespace ConsoleApp2.HeroGameDir
 			string whoHits = "";
 			bool critical = false;
 			bool miss = false;
-			
 
 
 
-			while (gameRound <10 +1)
+
+			while (gameRound < 2 + 1)
 			{
+				//first hit calculator
 				if (gameRound == 1)
 				{
 					heroNum += rnd.Next(1, 101);
 					villainNum += rnd.Next(1, 101);
-					Console.WriteLine("hero number: {0}",heroNum);
+					Console.WriteLine("hero number: {0}", heroNum);
 					Console.WriteLine("villain number: {0}", villainNum);
 					if (heroNum > villainNum)
 					{
 						whoHits = heroName;
-					}else if(villainNum > heroNum)
+						villainHP -= heroHit;
+						//Console.WriteLine("hero hit number {0}", heroHit);
+					} else if (villainNum > heroNum)
 					{
 						whoHits = villainName;
+						heroHP -= villainHit;
+						//Console.WriteLine("villain hit number {0}", villainHit);
 					}
-					Console.WriteLine(whoHits);
-					if (whoHits == heroName)
-					{
-						
-						Console.WriteLine("hero hit: {0}", rnd.Next(6,9),villainHP -= rnd.Next(6, 9));
-						Console.WriteLine("Villain hp after first hit: {0}", villainHP);
-					}
+					//Console.WriteLine(whoHits);
+					
 
+				} else if (gameRound > 1)
+				{
+					/*Console.WriteLine("hero hp {0}", heroHP);
+					Console.WriteLine("villain hp {0}", villainHP);
+				
+					 
+					 */
 				}
 				
-				
+
+
 
 
 				gameRound++;
