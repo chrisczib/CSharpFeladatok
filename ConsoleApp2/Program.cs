@@ -20,8 +20,8 @@ namespace ConsoleApp2
         static void Main(string[] args)
         {
             /*******************Hero Game*******************/
-            //_hero.mainGamePlay();
-            _test.missChance();
+            _hero.mainGamePlay();
+            
 
 
 

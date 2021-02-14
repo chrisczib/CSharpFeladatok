@@ -32,5 +32,9 @@ namespace ConsoleApp2.HeroGameDir
 			Console.WriteLine("Attack damage: {0}",attackDamage);
 
 		}
+
+
+
+
 	}
 }
