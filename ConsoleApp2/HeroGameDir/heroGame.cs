@@ -16,13 +16,12 @@ namespace ConsoleApp2.HeroGameDir
 			string heroName = "hero";
 			int heroHP = 60;
 			int heroHit = rnd.Next(6, 9); //between 6-8(6,7,8)
-			int heroNum = 0;
+			
 
 			//Villain stats
 			string villainName = "villain";
 			int villainHP = 70;
 			int villainHit = rnd.Next(5, 8); //between 5-7(5,6,7)
-			int villainNum = 0;
 
 			//Gameplay stats
 			int gameRound = 0;
@@ -41,20 +40,88 @@ namespace ConsoleApp2.HeroGameDir
 				gameRound++;
 				if (gameRound == 1)
 				{
-					Console.WriteLine("gameround 1");
+					Console.WriteLine("gameround 1, first hit calculator");
+					int heroNum = rnd.Next(1, 101);
+					int villainNum = rnd.Next(1, 101);
+
+					if (heroNum > villainNum)
+					{
+						firstHit = heroName;
+						Console.WriteLine("villain number {0}",villainNum);
+						Console.WriteLine("hero number {0}", heroNum);
+						Console.WriteLine("first hit is the hero!");
+						nextHit = villainName;
+					}
+					else if (villainNum > heroNum)
+					{
+						firstHit = villainName;
+						Console.WriteLine("villain number {0}", villainNum);
+						Console.WriteLine("hero number {0}", heroNum);
+						Console.WriteLine("first hit is the villain!");
+						nextHit = heroName;
+					}
+					gameRound++;
 				}
 				else
 				{
-					Console.WriteLine("Else ág {0}", gameRound);
+					
 				}
-				if (gameRound == 10)
+				if (gameRound == 10 | gameRound > 10)
 				{
 					game = false;
+					Console.WriteLine("Döntetlen {0}", gameRound);
+					Console.WriteLine("One more game?");
+					string playAgain = Console.ReadLine();
+					if (playAgain == "igen")
+					{
+						game = true;
+						gameRound = 0;
+					}else
+					{
+						game = false;
+					}
 
+				}
+				else if (gameRound < 10 && gameRound > 1)
+				{
+					Console.WriteLine("gameRound: {0}", gameRound);
+					if (nextHit == heroName)
+					{
+						heroHit = rnd.Next(6, 9);
+						criticalHit = rnd.Next(1,101);
+						missHit = rnd.Next(1, 101);
+						if (criticalHit <= 30 && missHit > 20)
+						{
+							Console.WriteLine("if (criticalHit <= 30 && missHit > 20)");
+							Console.WriteLine("villain hp before {0}, hero hit {1}, criticalHit {2}, missHit {2}", villainHP, heroHit, criticalHit, missHit);
+							heroHit = heroHit * 2;
+							villainHP -= heroHit;
+							Console.WriteLine("villain HP after {0}", villainHP);
+						}
+						else if (criticalHit <= 30 && missHit <= 20)
+						{
+							Console.WriteLine("else if (criticalHit <= 30 && missHit <= 20)");
+							heroHit = 0;
+							Console.WriteLine("heroHit: {0}",heroHit);
+
+						}
+						else if (criticalHit > 30 && missHit >20)
+						{
+							Console.WriteLine("else if (criticalHit > 30 && missHit >20)");
+							Console.WriteLine("villain hp before {0}, hero hit {1}, criticalHit {2}, missHit {2}",villainHP,heroHit, criticalHit, missHit);
+							villainHP -= heroHit;
+							Console.WriteLine("villain HP after {0}",villainHP);
+						}
+						else
+						{
+							Console.WriteLine("minden más ami nincs a felső 3ba itt megtörténik");
+						}
+
+					}
 				}
 				else
 				{
-
+					game = true;
 				}
 			}
 
