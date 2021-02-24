@@ -4,7 +4,7 @@ using ConsoleApp2.BFeladatsor;
 using ConsoleApp2.CFeladatsor;
 using ConsoleApp2.Orai_Magyarazatok;
 using ConsoleApp2.HeroGameDir;
-
+using ConsoleApp2.Orai_Dolgozat;
 
 namespace ConsoleApp2
 {
@@ -16,14 +16,17 @@ namespace ConsoleApp2
         static tombok _oraifeladatok = new tombok();
         static heroGame _hero = new heroGame();
         static throwaway _test = new throwaway();
+        static oraidolgozat _od = new oraidolgozat();
+        static listak _lista = new listak();
 
         static void Main(string[] args)
         {
             /*******************Hero Game*******************/
-            _hero.mainGamePlay();
-            
-
-
+            // _hero.mainGamePlay();
+            /**********Tömbök**********/
+            //_od.oraiFeladat();
+            /*********listák*********/
+            _lista.lista1();
 
 
 

@@ -6,6 +6,7 @@ namespace ConsoleApp2.Orai_Magyarazatok
 {
 	class tombok
 	{
+        //Február 10
             public void tombokFeladat()
             {
                 Console.WriteLine("hány elemű a tömb??");
