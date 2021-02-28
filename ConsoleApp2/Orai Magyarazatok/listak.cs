@@ -101,27 +101,45 @@ namespace ConsoleApp2.Orai_Magyarazatok
                 A második rész ennek analógiájára:
                 Létre kell hozni egy 10 elemű listát, megvizsgálni, hogy vannak-e benne páros számok, ha vannak, akkor azokat átmásolni egy tömbbe és egy listába.
              */
+            Random rnd = new Random();
+ 
+            //Első rész
             int darab = 10;
-            int[] tomb = new int[darab];
-
-
-
-
-            List<int> lista = new List<int>();
-
-
+            int[] tombOG = new int[darab];
+            int[] tombParos = new int[darab];
+            List<int> listaparos = new List<int>();
+            for (int i = 0; i < tombOG.Length; i++)
+            {
+                int randomint = rnd.Next(10000);
+                tombOG[i] = randomint;
+				//Console.WriteLine("TombOG: " + tombOG[i]);
+				if (tombOG[i] % 2 == 0)
+				{
+                    tombParos[i] += tombOG[i];
+                    listaparos.Add(tombOG[i]);
+                }
+                Console.WriteLine("tombparos: " + tombParos[i]);
+            }
+            listaparos.ForEach(Console.WriteLine);
+            
+            //Második rész
+            List<int> listaOG = new List<int>(darab);
+            int[] tombParos2 = new int[darab];
+            List<int> listaParos2 = new List<int>(darab);
+			for (int i = 0; i < 10; i++)
+			{
+                listaOG.Add(rnd.Next(10000));
+				if (listaOG[i] % 2 == 0)
+				{
+                    listaParos2.Add(listaOG[i]);
+                    tombParos2[i] += listaOG[i];
+				}
+                Console.WriteLine("tombParos2: " + tombParos2[i]);
+			}
+            listaOG.ForEach(Console.WriteLine);
 
         }
 
     }
 
 }
-/*
-          
-
-
-2: feladat
-2 listám 2 tömb
-1 lista 1 tömb rendelkezik adatokkal
- 
- */

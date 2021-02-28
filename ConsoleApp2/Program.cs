@@ -24,11 +24,11 @@ namespace ConsoleApp2
             /*******************Hero Game*******************/
             // _hero.mainGamePlay();
             /**********Tömbök**********/
-            _od.oraiFeladat();
+            //_od.oraiFeladat();
             /*********listák*********/
             //_lista.lista1();
             //_lista.lista2();
-
+            _lista.lista3();
 
 
 
