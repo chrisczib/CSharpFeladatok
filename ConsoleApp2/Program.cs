@@ -5,6 +5,7 @@ using ConsoleApp2.CFeladatsor;
 using ConsoleApp2.Orai_Magyarazatok;
 using ConsoleApp2.HeroGameDir;
 using ConsoleApp2.Orai_Dolgozat;
+using ConsoleApp2.File_Handling;
 
 namespace ConsoleApp2
 {
@@ -18,6 +19,8 @@ namespace ConsoleApp2
         static throwaway _test = new throwaway();
         static oraidolgozat _od = new oraidolgozat();
         static listak _lista = new listak();
+        static fileHandling _fileHandling = new fileHandling();
+
 
         static void Main(string[] args)
         {
@@ -28,9 +31,10 @@ namespace ConsoleApp2
             /*********listák*********/
             //_lista.lista1();
             //_lista.lista2();
-            _lista.lista3();
-
-
+            //_lista.lista3();
+            //_fileHandling.fileKezeles();
+            //_fileHandling.fileKezeles2();
+            _fileHandling.fileKezeles3();
 
 
 
